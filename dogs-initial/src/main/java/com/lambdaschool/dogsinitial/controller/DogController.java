@@ -30,8 +30,6 @@ public class DogController {
         Dog rtnDog;
         if(DogsinitialApplication.ourDogList.findDog(d -> (d.getId() == id)) == null) {
             throw new ResourceNotFoundException("Dog with ID " + id + " is not found.");
-        } else if(id == (int)id){
-            throw new ResourceNotFoundException("The provided parameters are invalid");
         } else {
             rtnDog = DogsinitialApplication.ourDogList.findDog(d -> (d.getId() == id));
             return new ResponseEntity<>(rtnDog, HttpStatus.OK);
@@ -52,7 +50,7 @@ public class DogController {
         return new ResponseEntity<>(rtnDogs, HttpStatus.OK);
     }
 
-    //localhost:8080/data/dogtable
+    //localhost:8080/dogs/dogtable
     @GetMapping(value = "/dogtable")
     public ModelAndView displayDogTable()
     {

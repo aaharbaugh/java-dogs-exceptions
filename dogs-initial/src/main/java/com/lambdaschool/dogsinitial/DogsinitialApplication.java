@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EnableWebMvc
 @SpringBootApplication
 public class DogsinitialApplication
 {
